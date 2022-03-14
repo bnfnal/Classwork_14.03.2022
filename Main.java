@@ -22,3 +22,22 @@ public class CountOddNumbers {
     return count;
   }
 }
+
+// Task 3: Sentence Smash
+
+import java.util.Arrays;
+
+public class SmashWords {
+
+	public static String smash(String... words) {
+    int n = words.length;
+    String res = "";
+    if (n == 0) return res;
+    for (int i = 0; i<n - 1; i++){
+      res += words[i];
+      res += ' ';
+    }
+    res += words[n-1];
+    return res;
+  }
+}
