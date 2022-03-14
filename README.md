@@ -13,9 +13,7 @@ Given two points P and Q, output the symmetric point of point P about Q. Each ar
 **Favorite solution:**
 
 package cw;
-
 import java.util.stream.IntStream;
-
 public class Reflections {
     public static int[] reflectPoint(int[] p, int[] q) {
         return IntStream.range(0, p.length).map(i -> q[i]*2 - p[i]).toArray();
@@ -37,9 +35,27 @@ Expect large Inputs!
 **Favorite solution:**
 
 package cw;
-
 class Kata {
   static int oddCount(int n) {
     return n / 2;
+  }
+}
+
+**Task 3: Sentence Smash**
+
+**Class:** SmashWords
+**Function:** smash(String... words)
+
+**Task:**
+Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+**Example:**
+['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
+
+**Favorite solution:**
+
+public class SmashWords {
+  public static String smash(String... words) {
+    return String.join(" ", words);
   }
 }
