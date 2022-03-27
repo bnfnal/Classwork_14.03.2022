@@ -1,50 +1,43 @@
 import java.util.Scanner;
 
-// Task 1: If you can't sleep, just count sheep!! 
+// Task 1: Points of Reflection 
 
-public class CountingSheeps 
+public class PointsOfReflection 
 {
-  public static String countingSheep(int n) {
-    String res = "";
-    for (int i = 1; i<n+1; i++){
-            res += i + " sheep...";
+  public static int[] reflectPoint(int[] p, int[] q) {
+    int[] p1 = new int[p.length];
+    for (int i = 0; i<p.length; i++){
+            p1[i] = 2*q[i] - p[i];
         }
-    return res;
+    return p1;
   }
 }
 
-// Task 2: Jaden Casing Strings
+// Task 2: Count Odd Numbers below n
 
-public class JadenCase 
-{
-  public String toJadenCase(String phrase) 
+public class CountOddNumbers {
+  public static int oddCount(int n)
   {
-    if (phrase == "" || phrase == null) return null;
-    String[] words = phrase.split(" ");
-    String res = "";
-		for (int i = 0; i<words.length; i++)
-    {
-      res += words[i].substring(0, 1).toUpperCase() + words[i].substring(1, words[i].length());
-      if (i<words.length-1) res += " ";
-    }
-    return res;
+    int count = n/2;
+    return count;
   }
 }
 
-// Task 3: You're a square!
+// Task 3: Sentence Smash
 
 import java.util.Arrays;
 
-public class Square 
-{    
-    public static boolean isSquare(int n) 
-    { 
-      if (n < 0) return false;
-      if (n == 0) return true;
-      for (int i = 1; i < (int)Math.sqrt(n) + 1; i++)
-      {
-        if (n == i*i) return true;
-      }
-        return false;
+public class SmashWords {
+
+	public static String smash(String... words) {
+    int n = words.length;
+    String res = "";
+    if (n == 0) return res;
+    for (int i = 0; i<n - 1; i++){
+      res += words[i];
+      res += ' ';
     }
+    res += words[n-1];
+    return res;
+  }
 }
